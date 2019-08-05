@@ -6,9 +6,13 @@ from passlib.apps import custom_app_context as pwd_security
 
 Base = declarative_base()
 
-class User(Base):
-    __tablename__ = "users"
+class Donation(Base):
+    __tablename__ = "donations"
     id = Column(Integer, primary_key=True)
-    username = Column(String)
-    password = Column(String)
-    address = Column(String)
+    first_name = Column(String)
+    last_name = Column(String)
+    country = Column(String)
+    city = Column(String)
+    street = Column(String)
+    house_number = Column(Integer)
+    email_address = Column(String)
