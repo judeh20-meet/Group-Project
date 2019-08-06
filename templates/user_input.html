@@ -1,0 +1,12 @@
+<h1> Fill the information below: </h1>
+<form action="/donate" method="POST">
+	<input type="text" name="first_name" placeholder="First Name">
+	<input type="text" name="second_name" placeholder="Second Name">
+	<input type="text" name="country" placeholder="Country">
+	<input type="text" name="city" placeholder="City">
+	<input type="text" name="street" placeholder="Street">
+	<input type="text" name="house_number" placeholder="House Number">
+	<input type="text" name="email_address" placeholder="Email Address">
+	<input type="submit" value="Submit">
+</form>
+<p> your first name is {{session["first_name"]}} </p>
