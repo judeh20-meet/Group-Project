@@ -1,4 +1,4 @@
-from model import Base, User
+from model import Base, Donation
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
