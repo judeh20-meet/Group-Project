@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 from model import Base, Donation 
+=======
+from model import Base, Donation
+>>>>>>> 32f6d7bd74f04721730e3a4ee0d1df74c7df60f6
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
