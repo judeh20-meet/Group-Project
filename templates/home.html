@@ -4,7 +4,7 @@
 
 <title>Nasijona- نسيجنا</title>
 <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='jsfile.js')}}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -108,7 +108,11 @@ In addition to the apprenticeship and workshops for youth, children and women, N
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b><i class="fa fa-user w3-margin-right"></i>CEO: Violette Khoury </b></p><br>
+<<<<<<< HEAD
       <img src="{{ url_for('static', filename='violette.jpg') }}" class="w3-round  w3-hover-opacity-off" width="200" height="200">
+=======
+      <img src="{{ url_for('static', filename='violette.jpg') }}" class="w3-round  w3-hover-opacity-off">
+>>>>>>> 403b9a417f7e691e783d209a0ad5b27e23b0c208
     </div>
 
 
@@ -148,50 +152,121 @@ In addition to the apprenticeship and workshops for youth, children and women, N
 <div id = "PO" class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
     <a href ="/donate" margin-top: 50px>
-    <span class="w3-xxlarge w3-text-black w3-wide">DONATE</span>
+    <span class="w3-xxlarge w3-text-black w3-wide" id = "Donate-button">DONATE</span>
   </a>
   </div>
 </div>
 
-====================================================
+
 <!-- Slideshow container -->
 <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="img1.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
+    <div class="numbertext">1 / 9</div>
+    <img src="static/PIC1.jpg">
+    <div class="text"></div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="img2.jpg" style="width:100%">
+    <div class="numbertext">2 / 9</div>
+    <img src="static/PIC2.jpg">
     <div class="text">Caption Two</div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="img3.jpg" style="width:100%">
+    <div class="numbertext">3 / 9</div>
+    <img src="static/PIC3.jpg">
     <div class="text">Caption Three</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 9</div>
+    <img src="static/PIC4.jpg">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 9</div>
+    <img src="static/PIC5.jpg">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 9</div>
+    <img src="static/PIC6.jpg">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 9</div>
+    <img src="static/PIC7.jpg">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">8 / 9</div>
+    <img src="static/PIC8.jpg">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">9 / 9</div>
+    <img src="static/PIC9.jpg">
+    <div class="text">Caption Two</div>
   </div>
 
   <!-- Next and previous buttons -->
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
 </div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
 <br>
 
 <!-- The dots/circles -->
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+
 </div>
-
-================================================================================
-
-
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -278,5 +353,6 @@ function toggleFunction() {
 
 </script>
 
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='jsfile.js')}}">
 </body>
 </html>
