@@ -89,6 +89,9 @@ img {
   animation-duration: 1.5s;
 }
 
+#Donate-button{
+	background-color: rgb(255,255,255,0.2);
+}
 @-webkit-keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
