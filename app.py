@@ -1,9 +1,9 @@
 from databases import *
 from flask import Flask, request, redirect, render_template
 from flask import session as login_session
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'you-will-never-guess'
+
 
 @app.route('/')
 def home():
