@@ -116,11 +116,11 @@ img {
   border: 2px solid black;
 }
 
-tr, td {
+/*tr, td {
   border: 2px solid black;
   padding: 5px;
   font-size: 20px;
-  color:black;
+  color:black;*/
 }
 
 table {
@@ -129,11 +129,49 @@ table {
 }
 
 #PriceDes {
-  padding: 140px;
+  padding: 90px;
+  margin-left: -300px;
 }
 
+.round{
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
 
+}
 
+.talk-bubble {
+  margin: 40px;
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 360px;
+  /*height: auto;*/
+  background-color: #d1330a;
+  color: white;
+  /*padding-left: 20px;
+  padding-right: 25px;*/
+  font-size: 27px;
+  font-family: Times New Roman;
+}
+
+/*.border{
+  border: 8px solid #666;
+}*/
+
+#bubble1 {
+  padding: 20px;
+}
+
+#bubble2 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#bubble3 {
+  padding-right: 20px;
+  padding-left: 20px;
+}
 
 
 
